@@ -1,0 +1,416 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* *{ margin:0; padding:0;} * */
+ /**{
+    border: solid 1px black;
+    box-sizing: border-box;
+}* */
+
+/*基礎設定*/
+p{
+	font-family:"微軟正黑體";
+	}
+
+/*test all*/
+#all{
+    width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*固定背景底圖*/
+html {
+    height: 100%;
+     }
+     
+body {
+   background-attachment: fixed;
+   background-repeat: no-repeat;
+   background-position:left top;
+   background-image: url(images/gallery_bg.jpg);
+    }
+
+/*導覽列*/
+
+#header{
+  width: 1300px;
+  height: 57px;
+  background-image: url(images/nav_bg_01.jpg);
+  margin-right: auto;
+  margin-left: auto;
+  position: fixed;
+  z-index: 9999;
+  }
+ 
+.logo{
+    display:block;
+    float:left;
+    width:10%;
+    height: 30px;
+    padding-top: 8px;
+}
+
+#nav{
+ display:block;
+ float:left;
+ width:100%;
+ height:30px;
+ 
+ background-repeat:no-repeat;
+ background-position:left;
+
+}
+
+
+
+.menu{  /*二修*//*三改*/
+ float:right;
+ margin-left:10px;
+ padding-top: 10px;
+ 
+}
+
+
+/*下拉式選單*/
+
+ul { /* 取消ul預設的內縮及樣式 */ 
+     margin: 0;
+     padding: 0;
+     list-style: none;
+ }
+
+ul.menutext {
+     border: 1px solid;
+     border-style:none;
+     display: inline-block;
+     font-family: 'Open Sans', Arial, sans-serif;
+     font-size: 12px;
+     letter-spacing: 1px;
+     
+ }
+
+ul.menutext li {
+     position: relative;
+     white-space: nowrap;
+     border-right: #CCC 1px solid;  
+    padding-top: 10px;      
+ }
+
+ul.menutext > li:last-child {
+     border-right: none;
+ }
+
+ul.menutext > li {
+     float: left; /* 只有第一層是靠左對齊*/
+ }  
+ 
+ul.menutext a {
+     /* background-color: #fff; */
+     background-color:rgba(0, 0, 0, 0);
+     color: #647166;
+     display: block;
+     padding: 0 25px;
+     text-decoration: none;
+     line-height: 35px;/*二修*/
+     font-weight:bolder;  
+     margin-left: 6px;  
+ }
+
+ul.menutext a:hover { /* 滑鼠滑入按鈕變色*/
+     background-color:rgba(233, 214, 48,0.5);
+     color: rgb(51, 51, 51);
+ }
+ul.menutext li:hover > a { /* 滑鼠移入次選單上層按鈕保持變色*/
+     background-color:rgba(248, 217, 40,0.5);
+     color: #515151;
+    }
+     
+
+ul.menutext ul {
+     border: #FFF 1px solid;
+     border-style:none;
+     position: absolute;
+     z-index: 99;
+     left: -1px;
+     top: 100%;
+    min-width: 180px;
+ }
+
+ul.menutext ul li {
+     border-bottom: #FFF 1px solid;
+     border-style:none;
+ }
+
+ul.menutext ul li:last-child {
+     border-bottom: none;
+ }
+ 
+ul.menutext ul { /*隱藏次選單*/
+     display: none;
+ } 
+
+ul.menutext li:hover > ul { /* 滑鼠滑入展開次選單*/
+     display: block;
+ }
+
+
+
+
+
+#white{ /*MENU下方撐開用的空DIV*/
+	width:1200px;
+	height:100px;
+    padding-top :145px;
+	margin-right:auto;
+	margin-left:auto;
+    /* background-image:url(images/images/white_02.png); */
+}
+
+
+
+/*footer 版權區設定*/
+ #down01{
+        
+    margin-right:auto;
+    margin-left:auto;
+    height:3%;
+    width:100%;
+    opacity:0.5;
+
+    bottom: 0px;
+    font-size: 8px;
+    }
+    
+h6 {
+text-align:center;
+bottom: 0px;
+font-size: 8px;
+
+} 
+
+
+
+
+
+
+/*gallery內容設定區*/
+#title_main{
+    width: 1300px;
+}
+
+.title_gallery_L{
+    display: inline-block;
+    border: solid 1px none;
+    width: 33%;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.title_gallery_R{
+    display: inline-block;
+    border: solid 1px none;
+    width: 33%;
+    background-color:  rgba(0, 0, 0, 0);;
+}
+
+.title_gallery{
+    display: inline-block;
+    border: solid 1px none;
+    width: 33%;
+}
+
+#main_gallery{
+    width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#gallery_ui{
+    display: inline-block;
+    border: solid 1px none;
+    width: 33%;
+    
+}
+
+#gallery_graphic{
+    display: inline-block;
+    border: solid 1px none;
+    width: 33%;
+    
+}
+
+#gallery_creation{
+    display: inline-block;
+    border: solid 1px none;
+    width: 33%;
+    
+}
+
+ .gallery_mainpic{
+    width: 260px;
+    height: 260px;
+    margin-right: auto;
+    margin-left:auto;
+    background-color: #a6d4d2;
+    margin-bottom: 10px;
+    margin-top: 10px;;
+} 
+
+h4{
+    text-align:center;
+    font-style:italic;
+}
+
+p{
+    text-align:center;
+}
+
+
+/*作品頁統一使用FOOTER CSS---頭↓*/
+#down01{
+    margin-right:auto;
+    margin-left:auto;
+    height:5%;
+    width:100%;
+    bottom: 0px;
+    font-size: 8px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  #down01 h6{
+    padding-top: 5px;
+  }
+  
+  .gallery_mainpicN{
+    width: 200px;
+    height: 100px;
+    margin-right: auto;
+    margin-left:auto;
+    background-color: #a6d4d2;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+  
+  
+  /*藏*/
+  #gallery_none{
+  display: inline-block;
+  border: solid 1px none;
+  width: 18%;
+  opacity: 0;
+  }
+  
+  /*作品頁統一使用FOOTER CSS---尾↑*/
+  
+/*ui按鈕*/
+#gallery_ui a .gallery_mainpic{
+    background-image:url(images/gallery_icon/icon_ui.jpg);
+
+}
+
+#gallery_ui a .gallery_mainpic:hover{
+    background-image:url(images/gallery_icon/icon_ui_c.jpg);
+    border:dotted 3px white ;
+}
+
+
+/*graphic按鈕*/
+#gallery_graphic a .gallery_mainpic{
+    background-image:url(images/gallery_icon/icon_graphic.jpg);
+}
+
+#gallery_graphic a .gallery_mainpic:hover{
+    background-image:url(images/gallery_icon/icon_graphic_c.jpg);
+    border:dotted 3px white ;
+}
+
+
+/*creation按鈕*/
+#gallery_creation a .gallery_mainpic{
+    background-image:url(images/gallery_icon/icon_creation.jpg);
+}
+
+#gallery_creation a .gallery_mainpic:hover{
+    background-image:url(images/gallery_icon/icon_creation_c.jpg);
+    border:dotted 3px white ;
+}
+
+
+
+
+
+/*RWD設定區*/
+@media screen and (max-width:800px){
+    #header{
+         width: 100%;
+     }  
+    #all{
+        width: 100%;
+    }
+    #white{
+        width: 100%;
+    }
+    #gallery_ui{
+     width: 100%;
+    }
+    #gallery_graphic{
+     width: 100%;
+    }
+    #gallery_creation{  
+     width: 100%;
+    }
+    #main_gallery{
+     width: 100%;
+    }
+     .title_main{
+     width: 100%;
+    }
+    .title_gallery{
+        width:100%;
+        margin-left: 50px;
+    }
+    .title_gallery_L{
+        width:0;
+    }
+    .title_gallery_R{
+        width:0;
+    }
+ }
+ 
+ @media screen and (max-width:320px){
+    #header{
+        width: 100%;
+    }    
+    #all{
+        width: 100%;
+    }
+    #white{
+        width: 100%;
+    }
+    #gallery_ui{
+     width: 100%;
+    }
+    #gallery_graphic{
+     width: 100%;
+    }
+    #gallery_creation{  
+     width: 100%;
+    }
+    #main_gallery{
+    width: 100%;
+    }
+    .title_main{
+     width: 100%;
+    }
+    .title_gallery{
+     width:100%;
+     margin-left: 50px;
+    }
+    .title_gallery_L{
+        width:0;
+    }
+    .title_gallery_R{
+        width:0;
+    }
+ }
